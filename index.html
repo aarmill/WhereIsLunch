@@ -14,11 +14,51 @@
 		<!-- TODO: Get normalize CSS (Avoid CDN as there has been controversy) -->
 		<!-- <link rel="stylesheet" href="css/normalize.css"> -->
 		<!-- <link rel="stylesheet" href="css/main.css"> -->
+		<!-- Alright so just as a quick hack and slash I will use bootstrap to rapidly create a mockup -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	</head>
 	<body>
-		<h1>Welcome to the landing page of Where Is Lunch</h1>
-  		<p>
-  			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut alias nihil quos nesciunt commodi quod soluta, eveniet cupiditate amet enim voluptas perspiciatis consequatur aliquam ratione consectetur tempore totam iure. Accusantium.
-  		</p>
+		<!-- Im going to be using some emmet magic in the video so this may go over your head -->
+
+		<!-- This makes the document a maximum 1152px wide and allows it to resize as the device gets smaller -->
+		<div class="container">
+			<div style="margin-top:5%;"></div>
+			<!-- Bootstrap jumbotron component -->
+			<div class="jumbotron">
+				<!-- I don't think this container is neccessary -->
+				<div class="container">
+					<h1>Where is Lunch?!</h1>
+					<p>A simple web service for groups of people that can't decide on where to eat lunch!</p>
+					<p>
+						<!-- This creates a placeholder for our columns, without this the grid would get a bit funky -->
+						<div class="row">
+							<!-- Bootstrap uses a 12 column system, saying that this is 12 columns wide on medium+ devices means it will take 100% of the width -->
+							<!-- On mobile devices this will default to width:100% -->
+							<div class="col-md-12" style="margin-bottom:25px;">
+								<form>
+									<label for="">Location:</label>
+									<input type="text" class="form-control">
+								</form>
+							</div>
+							<!-- Bootstrap uses a 12 column system, saying that this is 6 columns wide on medium+ devices means it will take 50% of the width -->
+							<!-- On mobile devices this will default to width:100% -->
+							<div class="col-md-6">
+								<a class="btn btn-danger btn-lg" id="find-lunch">Find Lunch</a>	
+							</div>
+						</div>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+
+		<!-- jQuery for bootstrap magic, this should need v1.4.2 or something but let's see how this goes -->
+		<!-- Nope it's perfect (v1.1.1) -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Latest compiled and minified JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<script src="js/main.js"></script>
 	</body>
 </html>
